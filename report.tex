@@ -45,13 +45,13 @@ The following functions has been implemented.
 \begin{itemize}
     \item \texttt{extract\_path(sentence)}. This function extracts for each token a path of dependency relations from the 
     ROOT to the token. We first parse the sentence to get a Doc object of spaCy and then, for each token in the sentence,
-    finds the path of dependency relations from the ROOT to the token.
+    we find the path of dependency relations from the ROOT to the token.
 
     The function accepts a sentence of type \texttt{string} and returns a dictionary containing for each token (keys in the dictionary)
-    the lists of dependency relations.
+    the list of dependency relations.
 
     \item \texttt{extract\_subtree(sentence)}. This function extracts the subtree of each token in the sentence. We first parse 
-    the sentence to get a Doc object of spaCy and then, for each token extract the subtree from the attribute \texttt{Token.subtree}.
+    the sentence to get a Doc object of spaCy and then, for each token, we extract the subtree using the attribute \texttt{Token.subtree}.
 
     The function accepts a sentence of type \texttt{string} and returns a dictionary containing for each token (keys in the dictionary)
     a list of tokens, ordered with respect to the sentence, representing the subtree.
@@ -76,7 +76,8 @@ The following functions has been implemented.
     indirect object (iobj) spans from the sentence.
 
     The function accepts a sentence of type \texttt{string} and returns a dictionary containing \texttt{"nsubj", "dobj", "iobj"} as keys 
-    and the relative spans as values. A span is represented as a list of tokens.
+    and the relative list of spans as values. If for example there are more subjects in the sentence, the entry "nsubj" will be a list 
+    containing all the subject spans. A span is represented as a list of tokens.
 
     
 \end{itemize}
